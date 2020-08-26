@@ -14,8 +14,16 @@
 #
 # Common directories for the project
 #
+cd /falco-ptrace/src/falco
+wget --no-check-certificate https://github.com/falcosecurity/falco/archive/0.25.0.tar.gz
+tar -xzf 0.25.0.tar.gz
+cd 0.25.0
+cp -rv etc/falco /etc/falco
+cp -v $ETC/falco/falco.yaml /etc/falco/falco.yaml
+cp -rv usr/bin/falco /usr/bin/falco
+cp -rv usr/share/falco /usr/share/falco
 
-cd pdig
+cd /falco-ptrace/src/pdig
 rm -rf build
 mkdir build
 cd build
